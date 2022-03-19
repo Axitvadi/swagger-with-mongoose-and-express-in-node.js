@@ -1,0 +1,21 @@
+{
+  "name": "first-app-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "watch": "nodemon index.js"
+  },
+  "author": "Axit",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^5.13.4",
+    "nodemon": "^2.0.15",
+    "swagger-ui-express": "^4.3.0"
+  }
+}

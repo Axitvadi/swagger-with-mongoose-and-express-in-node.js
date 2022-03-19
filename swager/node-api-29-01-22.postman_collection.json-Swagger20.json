@@ -1,0 +1,291 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "node-api-29-01-22",
+    "contact": {}
+  },
+  "host": "localhost:5000",
+  "basePath": "/api/student",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/add": {
+      "post": {
+        "summary": "add",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "add",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/addrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/get-all": {
+      "get": {
+        "summary": "get-all",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "get-all",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/get-by-id": {
+      "get": {
+        "summary": "get-by-id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "get-by-id",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/updaterequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/delete": {
+      "delete": {
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "addrequest": {
+      "title": "addrequest",
+      "example": {
+        "firstName": "rutvik",
+        "lastName": "sonani",
+        "age": 22,
+        "email": "xyz@gmail.com",
+        "city": "surat",
+        "phoneno": 1234567891,
+        "password": "ruTvik$88a",
+        "confirmpassword": "ruTvik$88a"
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "email": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "phoneno": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmpassword": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "age",
+        "email",
+        "city",
+        "phoneno",
+        "password",
+        "confirmpassword"
+      ]
+    },
+    "updaterequest": {
+      "title": "updaterequest",
+      "example": {
+        "_id": "61f5731f3b0de53b046e75cf",
+        "firstName": "mukund",
+        "lastName": "khunt",
+        "age": 22,
+        "email": "xyz@gmail.com",
+        "city": "surat",
+        "phoneno": 1234567891,
+        "password": "ruTvik$88a",
+        "confirmpassword": "ruTvk$88a",
+        "createdAt": "2022-01-29T17:02:23.229Z",
+        "updatedAt": "2022-01-29T17:02:23.229Z",
+        "__v": 0
+      },
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "email": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "phoneno": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmpassword": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "__v": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "_id",
+        "firstName",
+        "lastName",
+        "age",
+        "email",
+        "city",
+        "phoneno",
+        "password",
+        "confirmpassword",
+        "createdAt",
+        "updatedAt",
+        "__v"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
